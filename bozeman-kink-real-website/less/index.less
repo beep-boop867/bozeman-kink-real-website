@@ -1,0 +1,569 @@
+/*-- -------------------------- -->
+<---           Hero             -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    #hero-81 {
+        /* Centers button */
+        text-align: center;
+	    /* 144px - 300px - leaving extra space for the navigation */
+        padding: clamp(9rem, 25.95vw, 18.75rem) 16/16rem 0;
+        /* 130px - 450px */
+        padding-bottom: clamp(12.125rem, 30.95vw, 28.125rem);
+        position: relative;
+        z-index: 1;
+        /* Prevents white rectangle pseudos from overlapping the sections below */
+        overflow: hidden;
+
+        &:before {
+            /* Left side of the triangle */
+            content: '';
+            width: 500/16rem;
+            /* make really long so it covers the whole screen all the way to desktop */
+            height: 4000/16rem;
+            background: #fff;
+            opacity: 1;
+            transform: rotate(-67deg);
+            transform-origin: center;
+            position: absolute;
+            display: block;
+            bottom: -2235/16rem;
+            /* this makes the right edge sit at the 50% line at all times */
+            right: 50%;
+            z-index: 0;
+        }
+
+        &:after {
+            /* Right side of the triangle */
+            content: '';
+            width: 500/16rem;
+            height: 4000/16rem;
+            background: #fff;
+            opacity: 1;
+            transform: rotate(67deg);
+            transform-origin: center;
+            position: absolute;
+            display: block;
+            bottom: -2235/16rem;
+            /* this makes the left edge sit at the 50% line at all times */
+            left: 50%;
+            z-index: 0;
+        }
+
+        .cs-background {
+            width: 100%;
+            height: 100%;
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -2;
+
+            &:before {
+                /* Overlay */
+                content: '';
+                width: 100%;
+                height: 100%;
+                background: #000;
+                opacity: .7;
+                position: absolute;
+                display: block;
+                top: 0;
+                left: 0;
+                z-index: 1;
+                /* prevents the cursor from interacting with it */
+                pointer-events: none;
+            }
+            
+            img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .cs-container {
+            width: 100%;
+            max-width: 1080/16rem;
+            margin: auto;
+        }
+
+        .cs-title {
+            /* 39px - 61px */
+            font-size: clamp(2.4375rem, 6.40vw, 3.8125rem);
+            font-weight: 700;
+            line-height: 1.2em;
+            text-align: center;
+            max-width: 829/16rem;
+            /* 16px - 24px */
+            margin: 0 auto clamp(1rem, 4vw, 1.5rem);
+            color: #fff;
+            position: relative;
+
+            &:after {
+                /* Divider Line */
+                content: '';
+                /* 60px - 100px */
+                width: clamp(3.75rem, 9.5vw, 6.25rem);
+                /* 4px - 8px */
+                height: clamp(.25rem, .8vw, .5rem);
+                /* 16px - 24px */
+                margin: clamp(1rem, 4vw, 1.5rem) auto clamp(1rem, 4vw, 1.5rem);
+                background: var(--primary);
+                opacity: 1;
+                position: relative;
+                display: block;
+            }
+        }
+
+        .cs-text {
+            /* 16px - 25px */
+            font-size: clamp(1rem, 1.95vw, 1.5625rem);
+            line-height: 1.5em;
+            text-align: center;
+            width: 100%;
+            /* 464px - 800px */
+            max-width: clamp(29rem, 60vw, 50rem);
+            margin: 0 auto;
+            /* 40px - 48px */
+            margin-bottom: clamp(2.5rem, 4vw, 3rem);
+            color: #fff;
+        }
+    }
+}
+
+/* Desktop - 1300px (To make image background parallax) */
+@media only screen and (min-width: 81.25rem) {
+    #hero-81 {
+        background: url("images/hero/hero-desktop.jpg");
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+        /* makes the parallax effect */
+        background-attachment: fixed;
+        
+        .cs-background {
+            img {
+                display: none;
+            }
+        }
+    }
+}
+
+/* Dark Mode */
+@media only screen and (min-width: 0rem) {
+    body.dark-mode {
+        #hero-81 {
+            &:before, &:after {
+                background: var(--dark);
+            }
+
+            .cs-background {
+                &:before {
+                    opacity: .85;
+                }
+            }
+        }
+    }
+}
+/*-- -------------------------- -->
+<---         Services           -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    #h-services-81 {
+	    /* 40px - 100px */
+        padding: 0 16/16rem clamp(2.5rem, 7.9vw, 6.25rem) 16/16rem;
+        position: relative;
+        /* give a higher z index than the hero so it can sit on top */
+        z-index: 10;
+
+        .cs-card-group {
+            width: 100%;
+            max-width: 465/16rem;
+            margin: 0 auto 0;
+            /* negative margin pulls it up on top of the hero section */
+            /* -46px to -76px - we're calculating whatever clamp is and multiplying by -1
+            to make the value negative since clamp doesn't work with negative values */
+            margin-top: ~"calc(clamp(5rem, 13vw, 4.75rem)*-1)";
+            /* 40px - 60px top and bottom, 16px - 60px left & right */
+            padding: clamp(2.5rem, 4.7vw, 3.75rem) clamp(1rem, 4vw, 3.75rem);
+            box-shadow: 0px 20px 40px 0px rgba(0,0,0,0.05);
+            border-top: 8px solid var(--primary);
+            background-color: #fff;
+            /* prevents padding from affecting height and width */
+            box-sizing: border-box;
+        }
+
+        .cs-item {
+            list-style: none;
+            margin: 0 auto 40/16rem;
+            width: 100%;
+            max-width: 360/16rem;
+
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+        }
+
+        .cs-icon {
+            /* 68px - 88px */
+            width: clamp(4.25rem, 8.8vw, 5.5rem);
+            /* 68px - 88px */
+            height: clamp(4.25rem, 8.8vw, 5.5rem);
+            margin: auto;
+            /* 20px - 24px */
+            margin-bottom: clamp(1.25rem, 5vw, 1.5rem);
+            background: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            img {
+                /* 44px - 52px */
+                width: clamp(2.75rem, 5.8vw, 3.25rem);
+                height: auto;
+            }
+        }
+
+        .cs-title {
+            font-size: 20/16rem;
+            line-height: 1.2em;
+            text-transform: uppercase;
+            text-align: center;
+            margin: 0 auto 8/16rem;
+            color: var(--headerColor);
+        }
+
+        .cs-text {
+            font-size: 16/16rem;
+            text-align: center;
+            line-height: 1.5em;
+            max-width: 360/16rem;
+            margin: 0 auto;
+            color: var(--bodyTextColor);
+        }
+    }
+}
+
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+    #h-services-81 {
+        padding-bottom: 0;
+        .cs-card-group {
+            max-width: 1280/16rem;
+            /* -76px to -320px - we're calculating whatever clamp is and multiplying by -1
+               to make the value negative since clamp doesn't work with negative values */
+            margin-top: ~"calc(clamp(4.75rem, 20vw, 20rem)*-1)";
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            column-gap: 40/16rem;
+        }
+
+        .cs-item {
+            /* Reset margin so it doesn't interfere with flexbox */
+            margin: 0;
+        }
+    }
+}
+
+/* Dark Mode */
+@media only screen and (min-width: 0rem) {
+    body.dark-mode {
+        #h-services-81 {
+            .cs-card-group {
+                background: var(--medium);
+            }
+
+            .cs-icon {
+                background: var(--darkTint);
+            }
+
+            .cs-title {
+                color: #fff;
+            }
+
+            .cs-text {
+                color: #fff;
+            }
+        }
+    }
+}
+                                                     
+
+                                
+/*-- -------------------------- -->
+<---     Service Highlight      -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    #RPsbsr-580 {
+        background-color: #f7f7f7;
+    }
+}
+
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+    #RPsbsr-580 {
+        .cs-container {
+            justify-content: flex-end;
+        }
+
+        .cs-content {
+            /* sends it to the left in the first position */
+            order: -1;
+        }
+
+        .cs-picture {
+            /* 16px - 28px, added margin left and bottom to cs-picture so it pushes away by the same amount the yellow box element overlaps it left and bottom. This maintains consistent spacing left and bottom */
+            margin: 0 clamp(1rem, 2.4vw, 1.75rem) clamp(1rem, 2.4vw, 1.75rem) 0;
+
+            &:before {
+                /* yellow box */
+                content: '';
+                width: 50%;
+                height: 60%;
+                background: var(--secondary);
+                opacity: 1;
+                display: block;
+                position: absolute;
+                left: auto;
+                /* 16px - 28px, wrapped in calc function to multiple by negative 1 and get a negative clamp value */
+                bottom: ~"calc(clamp(1rem, 2.4vw, 1.75rem)*-1)";
+                right: ~"calc(clamp(1rem, 2.4vw, 1.75rem)*-1)";
+            }
+        }
+    }
+}
+
+/* Dark Mode */
+@media only screen and (min-width: 0rem) {
+    body.dark-mode {
+        #RPsbsr-580 {
+            background-color: rgba(0, 0, 0, .2);
+        }
+    }
+}
+                                
+/*-- -------------------------- -->
+<---          Gallery           -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    #gallery-1152 {
+        padding: var(--sectionPadding);
+
+        .cs-container {
+            width: 100%;
+            /* changes to 1280px at large desktop */
+            max-width: (944/16rem);
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* 48px - 64px */
+            gap: clamp(3rem, 6vw, 4rem);
+        }
+
+        .cs-content {
+            /* set text align to left if content needs to be left aligned */
+            text-align: center;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            /* centers content horizontally, set to flex-start to left align */
+            align-items: center;
+        }
+
+        .cs-topper {
+            color: #767676;
+        }
+
+        .cs-title {
+            margin: 0;
+        }
+
+        .cs-gallery {
+            width: 100%;
+            /* changes to 100% at tablet */
+            max-width: (500/16rem);
+            padding: 0;
+            margin: 0;
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            /* 16px - 20px */
+            gap: clamp(1rem, 1.5vw, 1.25rem);
+        }
+
+        .cs-image {
+            /* 260px - 360px */
+            min-height: clamp(16.25rem, 60vw, 20rem);
+            border-radius: (16/16rem);
+            /* clips the image corners */
+            overflow: hidden;
+            display: block;
+            grid-column: span 12;
+            grid-row: span 1;
+            position: relative;
+
+            img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                /* makes it act like a background image */
+                object-fit: cover;
+            }
+        }
+    }
+}
+
+/* Tablet - 700px */
+@media only screen and (min-width: 43.75rem) {
+    #gallery-1152 {
+        .cs-gallery {
+            max-width: 100%;
+            grid-template-rows: 1fr;
+        }
+
+        .cs-image {
+            grid-column: span 4;
+
+            &:nth-of-type(4),
+            &:nth-of-type(5) {
+                grid-column: span 6;
+            }
+        }
+    }
+}
+
+/* Large Desktop - 1300px */
+@media only screen and (min-width: 81.25rem) {
+    #gallery-1152 {
+        .cs-container {
+            max-width: (1280/16rem);
+        }
+
+        .cs-gallery {
+            grid-template-columns: repeat(5, 1fr);
+        }
+
+        .cs-image {
+            grid-column: span 1;
+
+            &:nth-of-type(4),
+            &:nth-of-type(5) {
+                grid-column: span 1;
+            }
+        }
+    }
+}
+
+/* Dark Mode */
+@media only screen and (min-width: 0rem) {
+    body.dark-mode {
+        #gallery-1152 {
+            .cs-topper {
+                color: var(--secondary);
+            }
+            .cs-title {
+                color: var(--bodyTextColorWhite);
+            }
+        }
+    }
+}
+
+                                
+/*-- -------------------------- -->
+<---            CTA             -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    #cta-51 {
+        padding: var(--sectionPadding);
+        position: relative;
+
+        .cs-container {
+            width: 100%;
+            max-width: (1280/16rem);
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* 48px - 64px */
+            gap: clamp(3rem, 6vw, 4rem);
+        }
+
+        .cs-content {
+            /* set text align to left if content needs to be left aligned */
+            text-align: center;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            /* centers content horizontally, set to flex-start to left align */
+            align-items: center;
+        }
+
+        .cs-topper {
+            color: var(--secondary);
+        }
+
+        .cs-title, .cs-text {
+            color: var(--bodyTextColorWhite);
+        }
+
+        .cs-text {
+            /* Override.  cs-topper cs-title and first cs-text should be removed and put into your global css sheet so it can control every instance of them on your site and is consistent. This selector is a section specific override that stays inside this stitch */
+            margin-bottom: 16/16rem;
+            opacity: .8;
+            &:last-of-type {
+                margin-bottom: 32/16rem;
+            }
+        }
+
+        .cs-picture {
+            height: 100%;
+            width: 100%;
+            display: block;
+            position: absolute;
+            z-index: -1;
+            top: 0;
+            left: 0;
+            z-index: -1;
+
+            &:before {
+                /* black color overlay */
+                content: '';
+                position: absolute;
+                display: block;
+                height: 100%;
+                width: 100%;
+                background: #000;
+                opacity: .8;
+                top: 0;
+                left: 0;
+                z-index: 1;
+            }
+
+            img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+}
+                                

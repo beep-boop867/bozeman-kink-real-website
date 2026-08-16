@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Swap our for actual link-->
+    <link rel="canonical" href="https://www.bozemankink.org/">
+
+    <meta name="description" content="Meta description for the page">
+    <meta name="keywords" content="">
+
+    <!--Social Media Display-->
+    <meta property="og:title" content="Title that shows up on google searches"/>
+    <meta property="og:description" content="Meta description for the page"/>
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="Official link for that page (https://www.site.com)"/>
+    <meta property="og:image" content="/assets/images/social.jpg"/>
+    <meta property="og:image:secure_url" content="/assets/images/social.jpg"/>
+
+    <!--Favicons-->
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicons/favicon-32x32.png?v1">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicons/favicon-16x16.png">
+    <link rel="manifest" href="/assets/favicons/site.webmanifest">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Preload -->
+    <link rel="preload" as="image" href="assets/images/logo-light.png">
+    <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/roboto-v29-latin-regular.woff2" crossorigin>
+    <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/roboto-v29-latin-700.woff2" crossorigin>
+
+    <link rel="stylesheet" href="/css/core-styles.css">
+    <link rel="stylesheet" href="/css/about.css">
+    <link rel="stylesheet" href="/css/dark.css">
+
+    <title>Service Keyword Phrase | Company Name | City, State</title>
+</head>
+<body>
+    <!--Screen reader skip main nav-->
+    <a class="skip" aria-label="skip to main content" href="#main">Click To Skip To Main Content</a>
+
+    <!-- ============================================ -->
+    <!--                 Navigation                   -->
+    <!-- ============================================ -->
+    <header id="cs-navigation">
+        <div class="cs-container">
+            <!--Nav Logo-->
+            <a href="/index.html" class="cs-logo" aria-label="back to home">
+                <img src="images/logo/logo.jpg" alt="logo" width="210" height="29" aria-hidden="true" decoding="async">
+            </a>
+            <!--Navigation List-->
+            <nav class="cs-nav" role="navigation">
+                <!--Mobile Nav Toggle-->
+                <button class="cs-toggle" aria-label="mobile menu toggle">
+                    <div class="cs-box" aria-hidden="true">
+                        <span class="cs-line cs-line1" aria-hidden="true"></span>
+                        <span class="cs-line cs-line2" aria-hidden="true"></span>
+                        <span class="cs-line cs-line3" aria-hidden="true"></span>
+                    </div>
+                </button>
+                <!-- We need a wrapper div so we can set a fixed height on the cs-ul in case the nav list gets too long from too many dropdowns being opened and needs to have an overflow scroll. This wrapper acts as the background so it can go the full height of the screen and not cut off any overflowing nav items while the cs-ul stops short of the bottom of the screen, which keeps all nav items in view no matter how mnay there are-->
+                <div class="cs-ul-wrapper">
+                    <ul id="cs-expanded" class="cs-ul" aria-expanded="false">
+                        <li class="cs-li">
+                            <a href="/index.html" class="cs-li-link">
+                                Home
+                            </a>
+                        </li>
+                        <li class="cs-li">
+                            <a href="/about.html" class="cs-li-link cs-active">
+                                About
+                            </a>
+                        </li>
+                        <li class="cs-li">
+                            <a href="/reviews.html" class="cs-li-link">
+                                Events
+                            </a>
+                        </li>
+                        <li class="cs-li">
+                            <a href="/resources.html" class="cs-li-link">
+                                Resources
+                            </a>
+                        </li>
+                        <li class="cs-li">
+                            <a href="/contact.html" class="cs-li-link">
+                                Contact
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <a href="/contact.html" class="cs-button-solid cs-nav-button">Contact Us</a>
+            <!--Dark Mode toggle, uncomment button code if you want to enable a dark mode toggle-->
+            <button id="dark-mode-toggle" aria-label="dark mode toggle">
+                <svg class="cs-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 480" style="enable-background:new 0 0 480 480" xml:space="preserve"><path d="M459.782 347.328c-4.288-5.28-11.488-7.232-17.824-4.96-17.76 6.368-37.024 9.632-57.312 9.632-97.056 0-176-78.976-176-176 0-58.4 28.832-112.768 77.12-145.472 5.472-3.712 8.096-10.4 6.624-16.832S285.638 2.4 279.078 1.44C271.59.352 264.134 0 256.646 0c-132.352 0-240 107.648-240 240s107.648 240 240 240c84 0 160.416-42.688 204.352-114.176 3.552-5.792 3.04-13.184-1.216-18.496z"/></svg>
+                <img class="cs-sun" aria-hidden="true" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fsun.svg" decoding="async" alt="moon" width="15" height="15">
+            </button>
+        </div>
+    </header>
+
+    <main id="main">
+        <!-- ============================================ -->
+        <!--                   Banner                     -->
+        <!-- ============================================ -->
+        <div id="banner-712">
+            <div class="cs-container">
+                <span class="cs-int-title">About Us</span>
+            </div>
+            <!--Background Image-->
+            <picture class="cs-background">
+                <!--Mobile Image-->
+                <source media="(max-width: 600px)" srcset="images/hero/hero-desktop.jpg">
+                <!--Tablet and above Image-->
+                <source media="(min-width: 601px)" srcset="images/hero/hero-desktop.jpg">
+                <img loading="lazy" decoding="async" src="images/hero/hero-desktop.jpg" alt="hero graphic" width="1550" height="1900" aria-hidden="true">
+            </picture>
+        </div>
+        <!-- ============================================ -->
+        <!--                 Side By Side                 -->
+        <!-- ============================================ -->
+
+        <section id="sbs-578">
+            <div class="cs-container">
+                <picture class="cs-picture">
+                    <!--Mobile Image-->
+                    <source media="(max-width: 600px)" srcset="images/about/scene.jpg">
+                    <!--Tablet and above Image-->
+                    <source media="(min-width: 601px)" srcset="images/about/scene.jpg">
+                    <img loading="lazy" decoding="async" src="images/about/scene.jpg" alt="Back spelt with rope" width="494" height="700">
+                </picture>
+                <div class="cs-content">
+                    <span class="cs-topper">Huh?</span>
+                    <h2 class="cs-title">What Is B.A.C.K.?</h2>
+                    <p class="cs-text">
+                        Bozeman Area Community Kink. Founded in 2020, B.A.C.K. is a kinky community serving the Gallatin Valley area with kink education, discussions, and kink oriented events. We welcome all open-minded adults (who are aged 18 and over and are out of high school), and support the right of all adults to engage in risk aware and consensual activities - we believe that sensuality and sexuality are a fundamental aspect of the human experience, so everyone should have the right to safely and consensually express their kink within the boundaries of the law without judgment. We support all people regardless of gender identity and expression, sexual orientation, race, preference, disability, or age. We do NOT condone bigotry.
+                    </p>
+                    <p class="cs-text">
+                        If you are wondering about parties, we currently do not have a hosting space. We are looking to find one, but appreciative of pointers. In the meantime, we use our coffee events to bring our community together.
+                    </p>
+                    <a href="" class="cs-button-solid">Get Free Quote</a>
+                </div>
+            </div>
+        </section>
+<!-- ============================================ -->
+<!--                   Steps                      -->
+<!-- ============================================ -->
+
+<section id="steps-1712">
+    <picture class="cs-background">
+        <!--Mobile Image-->
+        <source media="(max-width: 600px)"
+                srcset="images/about/letter.jpg">
+        <!--Tablet and above Image-->
+        <source media="(min-width: 601px)"
+                srcset="images/about/letter.jpg">
+        <img loading="lazy" decoding="async"
+                src="images/about/letter.jpg"
+                alt="busines meeting" width="522" height="609" aria-hidden="true">
+    </picture>
+    <div class="cs-container">
+        <div class="cs-wrapper">
+            <div class="cs-content">
+                <span class="cs-topper">Our Steps</span>
+                <h2 class="cs-title">How To Get Started</h2>
+            </div>
+            <ul class="cs-card-group">
+                <li class="cs-item">
+    <span class="cs-number">01</span>
+    <div class="cs-flex">
+        <h3 class="cs-h3">Connect with us</h3>
+        <p class="cs-item-text">
+            If this is your first time attending a B.A.C.K. event, please reach out to us via email or <a href="https://fetlife.com/BACK-group" target="_blank" rel="noopener noreferrer">our fetlife</a> page to start the vetting process.
+        </p>
+    </div>
+
+                </li>
+                <li class="cs-item">
+                    <span class="cs-number">02</span>
+                    <div class="cs-flex">
+                        <h3 class="cs-h3">Attend your first meeting</h3>
+                        <p class="cs-item-text">
+                            Come join us at our next coffee and bring your questions! Feel free to bring snacks, plushies, knitting, or whatever else makes you comfortable.
+                    </p>
+                    </div>
+                </li>
+<li class="cs-item">
+    <span class="cs-number">03</span>
+    <div class="cs-flex">
+        <h3 class="cs-h3">Keep coming back</h3>
+        <p class="cs-item-text">
+            Stay in the loop by following <a href="https://fetlife.com/BACK-group" target="_blank" rel="noopener noreferrer">our fetlife</a> page or checking the events page on this website.
+        </p>
+    </div>
+</li>
+                        </p>
+                    </div>
+                </li>
+                        </p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+                                
+
+<!-- ============================================ -->
+<!--                    FAQ                       -->
+<!-- ============================================ -->
+
+<section id="faq-254">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">FAQ’s</span>
+            <h2 class="cs-title">Frequently Asked Questions</h2>
+            <p class="cs-text">
+                Have questions about who we are?  Look below to see if we have an answer to your question.
+            </p>
+        </div>
+        <div class="cs-flex-group">
+            <ul class="cs-faq-group">
+                <!-- Active class added as default -->
+                <li class="cs-faq-item active">
+                    <button class="cs-button">What is a coffee?</button>
+                    <p class="cs-item-p">
+                        Coffees are group meetups where we discuss kink, sexuality, and other topics of interest. Come with a question in mind! All are welcome to attend, but please be aware that these are adult discussions and all attendees must be 18 years or older AND out of highschool.
+                    </p>
+                </li>
+                <li class="cs-faq-item">
+                    <button class="cs-button">How long are coffees?</button>
+                    <p class="cs-item-p">
+                        Coffees are two hours long.  Generally, the first hour is a discussion on a topic of interest, and the second hour is a social hour where attendees can mingle.
+                    </p>
+                </li>
+                <li class="cs-faq-item">
+                    <button class="cs-button">How much does attending cost?</button>
+                    <p class="cs-item-p">
+                        Coffees are free to attend. We ask that you RSVP on fetlife or shoot us an email. Donations are welcome - they help us bring educators in!
+                    </p>
+                </li>
+                <li class="cs-faq-item">
+                    <button class="cs-button">How often do you meet?</button>
+                    <p class="cs-item-p">
+                        We meet twice a month; the first and third Monday***.  Check our events page for more information.
+                </li>
+                <li class="cs-faq-item">
+                    <button class="cs-button">Am I going to find someone to have sex with?</button>
+                    <p class="cs-item-p">
+                        In all likelihood, no. Coffees are not meant to set up romantic connections, and we do not facilitate sexual encounters.  We do not condone sexual harassment or assault of any kind.  Please be respectful of others and their boundaries.
+                    <li class="cs-faq-item">
+                    <button class="cs-button">Where do you meet?</button>
+                    <p class="cs-item-p">
+                       To get the address for coffees, please reach out to us via email or <a href="https://fetlife.com/BACK-group" target="_blank" rel="noopener noreferrer">our fetlife</a> page.  We will provide you with the address and any other information you need after you are vetted.  We do not post the address publicly for safety reasons.
+                </li>
+                    <li class="cs-faq-item">
+                    <button class="cs-button">What is the two feet rule?</button>
+                    <p class="cs-item-p">
+                        Eveyone has a yum in kink. Sometimes, someones yum is your yuk.  If something is making you uncomfortable, use your two feet to remove yourself from the convversation.  No justification needed, just see yourself somewhere you feel safe.
+                </li>
+                <li class="cs-faq-item">
+                    <button class="cs-button">What is aftercare?</button>
+                    <p class="cs-item-p">
+                        Aftercare is the practice of providing emotional and physical support to individuals after engaging in sexual activities. It's an important aspect of responsible sexual behavior and helps ensure the well-being of all parties involved.
+                    </p>
+                </li>
+                </p>
+                </li>
+            </ul>
+            <div class="cs-cta">
+                <h3 class="cs-h3">Don’t see the answer you need?</h3>
+                <p class="cs-cta-p">
+                    That’s ok. Just drop a message and we will get back to you ASAP.
+                </p>
+                <a href="/contact.html" class="cs-button-solid">Contact us</a>
+            </div>
+        </div>
+    </div>
+</section>
+                                
+
+    <!-- ============================================ -->
+    <!--                   Footer                     -->
+    <!-- ============================================ -->
+
+<footer id="cs-footer-269">
+        <div class="cs-container">
+            <!-- Logo Group -->
+            <div class="cs-logo-group">
+                <a aria-label="go back to home" class="cs-logo" href="">
+                    <img class="cs-logo-img" aria-hidden="true" loading="lazy" decoding="async" src="images/logo/footer-logo.jpg" alt="logo" width="240" height="32">
+                </a>
+                <p class="cs-text">
+                    The Bozeman-Belgrade Kink Community is dedicated to providing a safe space for those interested in exploring alternative lifestyles with consent andrisk awareness.
+                </p>
+            </div>
+            <!-- Links -->
+            <ul class="cs-nav">
+                <li class="cs-nav-li">
+                    <span class="cs-header">Sitemap</span>
+                </li>
+                <li class="cs-nav-li">
+                    <a class="cs-nav-link" href="index.html">Home</a>
+                </li>
+                <li class="cs-nav-li">
+                    <a class="cs-nav-link" href="about.html">About</a>
+                </li>
+                <li class="cs-nav-li">
+                    <a class="cs-nav-link" href="reviews.html">Events</a>
+                </li>
+                <li class="cs-nav-li">
+                    <a class="cs-nav-link" href="contact.html">Contact</a>
+                </li>
+            </ul>
+            <!-- Contact Info -->
+            <ul class="cs-contact">
+                <li class="cs-nav-li">
+                    <span class="cs-header">Contact</span>
+
+                <li class="cs-contact-li">
+                    <a class="cs-contact-link" href="mailto:info@bozemankink.org">info@bozemankink.org</a>
+                </li>
+                <!-- Social Media -->
+                <li class="cs-contact-li cs-social-group">
+                    <div class="cs-social">
+                        <a class="cs-social-link" aria-label="visit google profile" href="">
+                            <img class="cs-social-img" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Social/google.svg" alt="google" width="11" height="11">
+                        </a>
+                        <a class="cs-social-link" aria-label="visit facebook profile" href="">
+                            <img class="cs-social-img" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Social/Facebook.svg" alt="facebook" width="6" height="11">
+                        </a>
+                        <a class="cs-social-link" aria-label="visit instagram profile" href="">
+                            <img class="cs-social-img" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Social/instagram.svg" alt="instagram" width="11" height="11">
+                        </a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </footer>
+                                
+
+    <script defer src="/assets/js/nav.js"></script>
+    <body>
+    ... 
+    <!-- all your page sections, including the FAQ section -->
+    ...
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const faqItems = document.querySelectorAll('#faq-254 .cs-faq-item');
+
+            faqItems.forEach((item) => {
+                const button = item.querySelector('.cs-button');
+
+                button.addEventListener('click', () => {
+                    const isActive = item.classList.contains('active');
+                    faqItems.forEach((el) => el.classList.remove('active'));
+                    if (!isActive) {
+                        item.classList.add('active');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
+</body>
+</html>
