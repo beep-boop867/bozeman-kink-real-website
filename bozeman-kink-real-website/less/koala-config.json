@@ -1,9 +1,0 @@
-
-{
-	"mappings": [
-		{
-		 	"src": "/less",
-		 	"dest": "/css"
-		}
-	]
-}
